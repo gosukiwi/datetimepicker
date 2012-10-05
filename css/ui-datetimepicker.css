@@ -1,0 +1,35 @@
+input.ui-datetimepicker-date {
+    width: 120px;
+    padding: 0.3em;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.ui-datetimepicker-button {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+div.ui-timepicker-container {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 14em;
+}
+
+div.ui-timepicker-header {
+    padding: 0.3em;
+    margin: 0.3em;
+}
+
+div.ui-timepicker-container select {
+    margin: 0.3em;
+    width: 90%;
+}
+
+input.ui-datetimepicker-input {
+    padding: 0.3em;
+    vertical-align: middle;
+    width: 80px;
+    margin-right: 5px;
+}
