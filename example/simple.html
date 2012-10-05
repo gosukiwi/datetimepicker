@@ -15,7 +15,7 @@
     <body>
 
         <input id="testInput" name="datetimepicker" type="text" />
-        <input type="button" id="btn" value="get datetime" />
+        <input type="button" id="btn" value="Get datetime" />
 
         <script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
         <script type="text/javascript" src="../js/jquery-ui-1.8.24.custom.min.js">
@@ -27,7 +27,8 @@
 
             $('#btn').click(function(){
                 alert($('#testInput').datetimepicker("getDatetime"));
-            });
+            })
+            .button(); // <- this is just to make the button look pretty
         </script>
     </body>
 </html>
