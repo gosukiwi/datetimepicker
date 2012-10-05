@@ -22,7 +22,8 @@
                 dateInput,
                 i,
                 j,
-                ampm;
+                ampm,
+                datetimeInput;
 
             // set up markup
             elem.addClass('ui-state-default ui-corner-all ' + 
@@ -46,8 +47,10 @@
 
             j = elem.attr('name');
             if(j) {
+                datetimeInput = $('<input type="hidden" name="' + j + '" />');
                 dateInput.attr('name', j + '-date');
                 elem.attr('name', j + '-time');
+                container.append(datetimeInput);
             }
 
             dateInput.datepicker(self.options.dateOptions);
@@ -94,15 +97,19 @@
             timepickerContainer.hide();
 
             // event binding
-            elem.bind('focus', function() {
+            elem.bind('focus', function () {
                 timepickerContainer.fadeIn('fast');
+            });
+
+            dateInput.bind('change', function () {
+                datetimeInput.val(self.getDatetime());
             });
 
             btnDate.bind('click', function () {
                 dateInput.datepicker("show");
             });
 
-            btnTime.bind('click', function() {
+            btnTime.bind('click', function () {
                 timepickerContainer.fadeToggle('fast');
             });
 
@@ -114,9 +121,10 @@
                 }
             });
 
-            timepicker.bind('change', function() {
+            timepicker.bind('change', function () {
                 timepickerContainer.fadeOut('fast');
                 elem.val(container.find('select').val());
+                datetimeInput.val(self.getDatetime());
             });
         },
 

@@ -3,10 +3,6 @@
 Datetimepicker is a jQuery UI plugin based on Datepicker, which allows you
 to pick a date and a time.
 
-Something to note is, that it changes the ```name``` attribute of your input, so
-if your input is named "datetime", you will now have two inputs "datetime-time"
-and "datetime-date", each with their respective datetime value.
-
 To use just include the css file ```ui-datetimepicker.css```, the js file 
 ```jquery-ui-datetimepicker.js``` in your html.
 
